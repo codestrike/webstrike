@@ -1,0 +1,29 @@
+{
+  "name": "webstrike",
+  "version": "0.0.0",
+  "description": "CodeStrike web app renewed version maintained by codechef campus chapter of atharva college of engineering",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codestrike/webstrike.git"
+  },
+  "keywords": [
+    "competitive",
+    "programming",
+    "codechef",
+    "codestrike"
+  ],
+  "author": "Ashish Gaikwad, Indresh Vishvakarma, Amit Menon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codestrike/webstrike/issues"
+  },
+  "homepage": "https://github.com/codestrike/webstrike",
+  "dependencies": {
+    "express": "^4.8.4",
+    "logfmt": "^1.1.2"
+  }
+}
