@@ -18,9 +18,20 @@
   margin-top: 3rem;
 }
 
+.footer aside {
+  margin-top: 2rem;
+}
+
 .plate {
   padding-top: 2rem;
   padding-bottom: 3rem;
+}
+
+.plate-box {
+  padding: 2rem 3rem;
+  text-align: center;
+  margin: 1rem;
+  border-radius: 6px;
 }
 
 .plate-chocolate {
@@ -30,6 +41,11 @@
 
 .plate-chocolate h1 {
   color:  #F0F0C0;
+}
+
+.plate-success {
+  color: #49A34B;
+  background-color: #BEEE9E;
 }
 /** AG classes **/
 .ag-hero {
