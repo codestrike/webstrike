@@ -17,3 +17,26 @@
 .footer h4 {
   margin-top: 3rem;
 }
+
+.plate {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.plate-chocolate {
+  background-color: #301800;
+  color: #C0A878;
+}
+
+.plate-chocolate h1 {
+  color:  #F0F0C0;
+}
+/** AG classes **/
+.ag-hero {
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.ag-date {
+  color: #5856D6;
+  font-weight: bold;
+}
