@@ -1,0 +1,19 @@
+/** Base Classes **/
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  bottom: 0;
+  background-color: orange;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer a:hover {
+  color: #555;
+}
+
+.footer h4 {
+  margin-top: 3rem;
+}
