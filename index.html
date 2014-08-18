@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf8">
   <title>CodeStrike</title>
+  <script type="text/javascript" src="/lib/angular.min.js"></script>
 </head>
 <body ng-cloak>
   <div class="header">
@@ -22,7 +23,7 @@
     </section>
     <section class="container">
       <script type="text/javascript">var submitted=false;</script>
-      <iframe name="hidden_iframe" id="hidden_iframe" hidden onload="if(submitted){window.reload;}"></iframe>
+      <iframe name="hidden_iframe" id="hidden_iframe" hidden onload="ga('send', 'form submit');if(submitted){window.reload;}"></iframe>
 
       <form class="form-horizontal row" name="form" ng-hide="isFormSubmitted" onsubmit="submitted=true;" target="hidden_iframe" action="https://docs.google.com/forms/d/1OqE1Hx9_IEnfgyJmyguVNHDjuUYpfJTK1tBJdwZFf8I/formResponse">
         <fieldset class="col-sm-4 col-sm-offset-4">
@@ -128,6 +129,7 @@
             <li>Notebook and Pen</li>
             <li>Workshop fee <b>Rs. 70/-</b>. To make sure only interested people attend</li>
             <li>Camera (optional). Incase if you want to click a pic with speaker :p</li>
+            <li>Your College ID.</li>
           </ul>
         </div>
       </div>
@@ -141,22 +143,22 @@
         <div class="col-md-4">
           <ul class="list-unstyled">
             <li><h4>Connect with us</h4></li>
-            <li><a href="">Facebook Page</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Facebook Group</a></li>
+            <li><a href="https://www.facebook.com/CodeStrikeHQ?fref=website" target="_blank">Facebook Page</a></li>
+            <li><a href="https://twitter.com/CodeStrikeHQ" target="_blank">Twitter</a></li>
+            <li><a href="https://www.facebook.com/groups/199120196926068/?fref=website" target="_blank">Facebook Group</a></li>
           </ul>
           <ul class="list-unstyled">
             <li><h4>Contact us</h4></li>
-            <li><a href="mailto:codestrikehq@gmail.com">Email</a></li>
-            <li>+91 9867 327 500</li>
+            <li><a href="mailto:codestrikehq@gmail.com">Send Email</a></li>
+            <li>President +91 9867 327 500</li>
           </ul>
         </div>
         <div class="col-md-4">
           <ul class="list-unstyled">
             <li><h4>About us</h4></li>
             <li><a href="">Team</a></li>
-            <li><a href="">Chapter - CodeStrike</a></li>
-            <li><a href="">CodeChef</a></li>
+            <li><a href="http://www.codechef.com/campus_chapter/CodeStrike" target="_blank">Chapter - CodeStrike</a></li>
+            <li><a href="http://www.codechef.com" target="_blank">CodeChef</a></li>
           </ul>
           <h4>Address:</h4>
           <address>
@@ -170,16 +172,25 @@
             <li><h4>Resources</h4></li>
             <li><a href="">CodeStrike Calendar</a></li>
             <li><a href="">Gallery</a></li>
-            <li><a href="">Wiki</a></li>
+            <li><a href="http://www.codechef.com/wiki/campus_chapter/CodeStrike" target="_blank">Wiki</a></li>
           </ul>
         </div>
       </div>
       <aside>
-        Copyright &copy; CodeStrike &middot; &emsp; License "MIT" &middot; &emsp; Source codes of this website are available on <a href="">GitHub</a>
+        Copyright &copy; CodeStrike &middot; &emsp; License "MIT" &middot; &emsp; Source codes of this website are available on <a href="https://github.com/codestrike/webstrike" target="_blank">GitHub</a>
       </aside>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/angular.min.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47459662-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
   <script type="text/javascript" src="/script/codestrike.js"></script>
   <link rel="stylesheet" type="text/css" href="/lib/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/mojojojo.css">
