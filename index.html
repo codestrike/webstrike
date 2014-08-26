@@ -4,6 +4,16 @@
   <meta charset="utf8">
   <title>CodeStrike</title>
   <script type="text/javascript" src="/lib/angular.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-47459662-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </head>
 <body ng-cloak>
   <div class="header">
@@ -24,17 +34,105 @@
       <p><b>Venue:</b> Atharva College of Engineering, Malad West, Mumbai</p>
     </section>
   </div>
-  <div class="plate plate-box">
-    <h1>Registration will start from 26<sup>th</sup> August 2014</h1>
-    <p>You can also register offline in Atharva College of Engineering on 27<sup>th</sup> and 28<sup>th</sup> August 2014.</p>
-    <p>For further details of registration call Ashish +91 9867 327 500</p>
+  <div class="plate plate-box" ng-controller="formCtrl">
+    <section class="container">
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" hidden onload="ga('send', 'form submit');if(submitted){window.reload;}"></iframe>
+
+      <form class="form-horizontal row" name="form" ng-hide="isFormSubmitted" onsubmit="submitted=true;" target="hidden_iframe" action="https://docs.google.com/forms/d/1Ik_W2PgYIoc1HFWCLZpJsmXOtQHmP06g1Mi-xwg61Y0/formResponse">
+        <fieldset class="col-sm-4 col-sm-offset-4">
+
+          <!-- Form Name -->
+          <legend class="text-center">Register Now</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="control-label" for="">Name</label>
+            <div class="controls">
+              <input ng-model="form.name" name="entry.1041271014" type="text" placeholder="Steve Jobs" class="form-control input-lg" required="">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="control-label" for="">Email Id</label>
+            <div class="controls">
+              <input ng-model="form.email" name="entry.1011853920" type="email" placeholder="steve@apple.com" class="form-control input-lg" required="">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="control-label" for="">College Name</label>
+            <div class="controls">
+              <input ng-model="form.college" name="entry.1626193117" type="text" placeholder="Monster College" class="form-control input-lg" required="">
+
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="control-label" for="">Mobile Number</label>
+            <div class="controls">
+              <input ng-model="form.mobile" name="entry.798596594" type="number" placeholder="1234567890" class="form-control input-lg" required="">
+
+            </div>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="entry.34788059" value="Yes"> I've laptop.
+            </label>
+            <span class="help-block">If you don't have laptop, we will provide you PC.</span>
+          </div>
+
+          <input type="hidden" name="draftResponse" value="[,,&quot;-7153149337963488408&quot;]">
+          <input type="hidden" name="pageHistory" value="0">
+
+
+          <input type="hidden" name="fbzx" value="-7153149337963488408">
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="control-label" for=""></label>
+            <div class="controls">
+              <button name="" type="submit" title="Register me for this python workshop" class="btn btn-primary btn-lg btn-block" ng-click="submit()">Register Me</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+
+      <div class="plate plate-success text-center" ng-show="isFormSubmitted">
+        <h2>Your registration is under consideration</h2>
+        <p class="lead">We have limited seats. Only 30 seats for offline registration and only 20 seats for online registration.</p>
+        <h4>We will let you know via Email or SMS when your registration is confirmed</h4>
+        <p>
+          Come on time as only 20 seats are available for online registrations and your seat will be secured on first come first serve basis<br><br>
+          <small>Reload This Page To Register Again</small>
+        </p>
+      </div>
+
+      <aside class="well">
+          <p>You can also register offline in Atharva College of Engineering on 27<sup>th</sup> and 28<sup>th</sup> August 2014.</p>
+          <p>For further details of registration call <b>Amit</b> +91 9757 292 424 or <b>Ashish</b> +91 9867 327 500</p>
+          </aside>
+    </section>
   </div>
+
+  <section class="plate plate-sky">
+    <div class="container">
+      details about workshop #TODO
+    </div>
+  </section>
 
   <section class="plate plate-chocolate">
     <div class="container">
-    <h1>Feedback on Python Workshop</h1>
-    <p>If you have attended Python workshop of 25<sup>th</sup> August 2014, we would like to hear from you.</p>
-    <p class="lead">Submit your feedback via this <a href="https://docs.google.com/forms/d/1B4aufgRyOFGNqAbm8S0xJD3q5i3Ob2C6C6HIJeQB5ls/viewform?usp=send_form" target="_blank">Google form.</a></p>
+      <h1>Feedback on Python Workshop</h1>
+      <p>If you have attended Python workshop of 25<sup>th</sup> August 2014, we would like to hear from you.</p>
+      <p class="lead">Submit your feedback via this <a href="https://docs.google.com/forms/d/1B4aufgRyOFGNqAbm8S0xJD3q5i3Ob2C6C6HIJeQB5ls/viewform?usp=send_form" target="_blank">Google form.</a></p>
     </div>
   </section>
 
@@ -82,16 +180,7 @@
       </aside>
     </div>
   </div>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-47459662-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
   <script type="text/javascript" src="/script/codestrike.js"></script>
   <link rel="stylesheet" type="text/css" href="/lib/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/style/mojojojo.css">

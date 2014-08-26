@@ -47,6 +47,11 @@
   color: #49A34B;
   background-color: #BEEE9E;
 }
+
+.plate-sky {
+  color: #F7F972;
+  background-color: #003E5F;
+}
 /** AG classes **/
 .ag-hero {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
