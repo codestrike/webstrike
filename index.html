@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="CodeStrike">
+<html ng-app="CodeStrike" lang="en-IN">
 <head>
   <meta charset="utf8">
-  <title>CodeStrike</title>
+  <title>CodeStrike - CodeChef Atharva Chapter</title>
   <script type="text/javascript" src="/lib/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular-ui-router.min.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,149 +19,14 @@
 <body ng-cloak>
   <div class="header">
     <ul class="nav nav-pills nav-justified">
-      <li class="nav-logo"><a href="">CodeStrike</a></li>
-      <li class="hidden-xs"><a href="">About us</a></li>
-      <li class="hidden-xs"><a href="">Calendar</a></li>
-      <li class="hidden-xs"><a href="">Gallery</a></li>
+      <li class="nav-logo"><a ui-sref="home">CodeStrike</a></li>
+      <li class="hidden-xs"><a ui-sref="about">About us</a></li>
+      <li class="hidden-xs"><a ui-sref="/">Calendar</a></li>
+      <li class="hidden-xs"><a ui-sref="/">Gallery</a></li>
     </ul>
   </div>
-  <div class="content-area" ng-controller="formCtrl">
-    <section class="jumbotron text-center">
-      <h1>Competitive Programming</h1>
-      <h2>Workshop <span class="text-muted">as</span> Crash Course</h2>
-      <p>A workshop on competitive programming as a crash course</p>
-      <h4 class="ag-date">2<sup>nd</sup> September 2014</h4>
-      <p><b>Time:</b> 1 pm</p>
-      <p><b>Venue:</b> Atharva College of Engineering, Malad West, Mumbai</p>
-    </section>
-  </div>
-  <div class="plate plate-box" ng-controller="formCtrl">
-    <section class="container">
-      <script type="text/javascript">var submitted=false;</script>
-      <iframe name="hidden_iframe" id="hidden_iframe" hidden onload="ga('send', 'form submit');if(submitted){window.reload;}"></iframe>
 
-      <form class="form-horizontal row" name="form" ng-hide="isFormSubmitted" onsubmit="submitted=true;" target="hidden_iframe" action="https://docs.google.com/forms/d/1Ik_W2PgYIoc1HFWCLZpJsmXOtQHmP06g1Mi-xwg61Y0/formResponse">
-        <fieldset class="col-sm-4 col-sm-offset-4">
-
-          <!-- Form Name -->
-          <legend class="text-center">Register Now</legend>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="control-label" for="">Name</label>
-            <div class="controls">
-              <input ng-model="form.name" name="entry.1041271014" type="text" placeholder="Steve Jobs" class="form-control input-lg" required="">
-
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="control-label" for="">Email Id</label>
-            <div class="controls">
-              <input ng-model="form.email" name="entry.1011853920" type="email" placeholder="steve@apple.com" class="form-control input-lg" required="">
-
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="control-label" for="">College Name</label>
-            <div class="controls">
-              <input ng-model="form.college" name="entry.1626193117" type="text" placeholder="Monster College" class="form-control input-lg" required="">
-
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="control-label" for="">Mobile Number</label>
-            <div class="controls">
-              <input ng-model="form.mobile" name="entry.798596594" type="number" placeholder="1234567890" class="form-control input-lg" required="">
-
-            </div>
-          </div>
-
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="entry.34788059" value="Yes"> I've laptop.
-            </label>
-            <span class="help-block">If you don't have laptop, we will provide you PC.</span>
-          </div>
-
-          <input type="hidden" name="draftResponse" value="[,,&quot;-7153149337963488408&quot;]">
-          <input type="hidden" name="pageHistory" value="0">
-
-
-          <input type="hidden" name="fbzx" value="-7153149337963488408">
-
-          <!-- Button -->
-          <div class="form-group">
-            <label class="control-label" for=""></label>
-            <div class="controls">
-              <button name="" type="submit" title="Register me for this python workshop" class="btn btn-warning btn-lg btn-block" ng-click="submit()">Register Me</button>
-            </div>
-            <span class="help-block">Only 20 seats are available on first come first serve basis for online registrations</span>
-          </div>
-
-        </fieldset>
-      </form>
-
-      <div class="plate plate-success text-center" ng-show="isFormSubmitted">
-        <h2>Your registration is under consideration</h2>
-        <p class="lead">We have limited seats. Only 30 seats for offline registration and only 20 seats for online registration.</p>
-        <h4>We will let you know via Email or SMS when your registration is confirmed</h4>
-        <p>
-          Come on time as only 20 seats are available for online registrations and your seat will be secured on first come first serve basis<br><br>
-          <small>Reload This Page To Register Again</small>
-        </p>
-      </div>
-
-      <aside class="well">
-          <p>You can also register offline in Atharva College of Engineering on 27<sup>th</sup> and 28<sup>th</sup> August 2014.</p>
-          <p>For any query regarding workshop call <b>Amit</b> +91 9757 292 424 or <b>Ashish</b> +91 9867 327 500</p>
-          </aside>
-    </section>
-  </div>
-
-  <section class="plate plate-sky">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>What is competitive programming ?</h2>
-          <p>Competitive programming is a mind sport, involving participants trying to program according to provided specifications. Competitive programming is recognized and supported by several multinational software and Internet companies, such as <b>Google, Facebook</b> and <b>IBM</b>.</p>
-        </div>
-        <div class="col-sm-6">
-          <h2>What will be covered in workshop ?</h2>
-          <p>We will cover basics of competitive programming. Also give introductory examples of dynamic programming.</p>
-          <p>We will also solve competitive programming problems during workshop to demonstrate live working of different solutions of same problem.</p>
-          <p>All participants will get certificate if participation.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>What do you need ?</h2>
-          <ul>
-            <li>Prior programming experience. You should be familiar with atleast one programming language. Note that this workshop is language independent</li>
-            <li>One notebook and pen.</li>
-            <li>Workshop fee of <b>Rs. 50/-</b></li>
-            <li>Laptop (optional). If you don't have laptop, we will provide you PC.</li>
-            <li>Softwares like Compilers, IDE etc which you will use. We already have softwares required for Python.</li>
-          </ul>
-        </div>
-        <div class="col-sm-6">
-          <h2>Who are speakers ?</h2>
-          <p>There will be two speakers to conduct this interactive workshop along with the team of volunteers.</p>
-          <dl>
-            <dt>&bull; Jignesh Jain</dt>
-            <dd>He represented VJTI in ACM ICPC regional onsite round in last academic year. He is very active competitive programmer. He also did internship at Microsoft.</dd>
-            <dt>&bull; CodeStrike Member</dt>
-            <dd>One of the CodeStrike member, who is active competitive programmer, will be second speaker.</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div ui-view></div>
 
   <section class="plate plate-chocolate">
     <div class="container">
@@ -189,7 +55,7 @@
         <div class="col-md-4">
           <ul class="list-unstyled">
             <li><h4>About us</h4></li>
-            <li><a href="">Team</a></li>
+            <li><a ui-sref="about">Team</a></li>
             <li><a href="http://www.codechef.com/campus_chapter/CodeStrike" target="_blank">Chapter - CodeStrike</a></li>
             <li><a href="http://www.codechef.com" target="_blank">CodeChef</a></li>
           </ul>

@@ -1,0 +1,46 @@
+<section class="jumbotron">
+  <div class="container">
+    <h1>CodeStrike</h1>
+    <p class="text-muted">CodeChef Atharva Chapter</p>
+    <p>In this semester, CodeStrike will organize one competition on CodeChef platform on 23<sup>rd</sup> September 2014 and one crash course in Atharva College of Engineering on 24<sup>th</sup> September 2014.</p>
+  </div>
+</section>
+
+<section class="plate">
+  <div class="container">
+    <h1>New Team of CodeStrike</h1>
+    <p>On 27<sup>th</sup> August 2014 we conducted interviews for selection of new members. List of selected members is already displayed in college.</p>
+    <p>
+      Now CodeStrike is made of 23 students of Atharva College of Engineering. There are 7 seats still vacant and are reserved for girls. Any girl from First or Second year, who is interested, can apply for vacant seats.
+    </p>
+    <p>Structure and members of new team can be found on <a ui-sref="about">about</a> page.</p>
+  </div>
+</section>
+
+<section class="plate plate-sky">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Upcoming Events</h3>
+        <ul>
+          <li ng-repeat="e in events | orderBy:date:reverse | greaterDate:today">
+            <p>
+              {{e.title}} <br> <i>On {{e.date | date:'mediumDate'}}</i>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <h3>Recent Events</h3>
+        <p>We organized following events till today</p>
+        <ul>
+          <li ng-repeat="e in events | limitTo:3 | orderBy:date | greaterDate:today:false">
+            <p>
+              {{e.title}}<br> <i>On {{e.date | date:'mediumDate'}}</i>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
