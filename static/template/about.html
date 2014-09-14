@@ -1,3 +1,4 @@
+
 <section class="jumbotron">
   <div class="container">
     <h1>CodeChef and CodeStrike</h1>
@@ -19,12 +20,45 @@
   <h1>CodeStrike New Team</h1>
   <p class="text-muted">Active since 1<sup>st</sup> September 2014</p>
   <ul class="list-unstyled">
-    <li ng-repeat="m in members" class="ag-card-person">
-      <h3>{{m.name}}</h3>
-      <p>{{m.post}}</p>
-      <p class="text-meted">{{m.class}}</p>
-      <p class="lead">{{m.info}}</p>
-    </li>
+  <div class="immort">
+     <li ng-repeat="i in immortals" class="ag-card-person">
+     <div class="row">
+       <div class="imgsec col-md-4">
+         
+       </div>  
+       <div class=" col-md-8">
+        <h3>{{m.name}}</h3>
+        <p>{{m.post}}</p>
+        <p class="text-meted">{{m.class}}</p>
+        <p class="lead">{{m.info}}</p>
+       </div>
+     </div>
+     </li>
+  </div>   
+  <div class="member">
+     <li ng-repeat="m in members" class="ag-card-person">
+     <div class="row">
+       <div class="imgsec col-md-2">
+         
+       </div>  
+       <div class=" col-md-4">
+        <h3>{{m.name}}</h3>
+        <p>{{m.post}}</p>
+        <p class="text-meted">{{m.class}}</p>
+        <p class="lead">{{m.info}}</p>
+       </div>
+       <div class="imgsec col-md-2">
+         
+       </div>  
+       <div class=" col-md-4">
+        <h3>{{m.name}}</h3>
+        <p>{{m.post}}</p>
+        <p class="text-meted">{{m.class}}</p>
+        <p class="lead">{{m.info}}</p>
+       </div>
+     </div>
+     </li>
+  </div>   
   </ul>
   </div>
 </section>
